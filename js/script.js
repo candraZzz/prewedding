@@ -2,28 +2,28 @@
    KONFIGURASI — ganti semua data undangan di sini saja
    ===================================================== */
 const CONFIG = {
-  groom: { nick: "Tomi", full: "Tomi", parents: "Bapak [AYAH PRIA] & Ibu [IBU PRIA]" },
-  bride: { nick: "Herjianti", full: "Herjianti Suantara", parents: "Bapak [AYAH WANITA] & Ibu [IBU WANITA]" },
+  groom: { nick: "Tomi", full: "Tomi", parents: "Bapak Anto & Ibu Dewi" },
+  bride: { nick: "Herjianti", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prasi" },
 
   // Format: YYYY-MM-DDTHH:MM:SS+offset (WITA = +08:00, WIB = +07:00) — ganti [TANGGAL] di sini
-  date: "2026-12-12T08:00:00+08:00",
+  date: "2026-10-14T08:00:00+08:00",
   timeZone: "Asia/Makassar", // Asia/Jakarta untuk WIB (mis. Kalimantan Barat)
 
   events: [
     {
-      title: "Akad Nikah", date: "2026-12-12T08:00:00+08:00", time: "08.00 WITA – selesai",
-      place: "[LOKASI]", address: "[ALAMAT]", maps: "https://maps.google.com/?q=LOKASI-AKAD"
+      title: "Akad Nikah", date: "2026-10-14T08:00:00+08:00", time: "08.00 WIB – selesai",
+      place: "Desa muara inu rt 02", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/fbuYU2eYNiDxAwgn6?g_st=ic"
     },
     {
-      title: "Resepsi", date: "2026-12-12T11:00:00+08:00", time: "11.00 – 14.00 WITA",
-      place: "[LOKASI]", address: "[ALAMAT]", maps: "https://maps.google.com/?q=LOKASI-RESEPSI"
+      title: "Resepsi", date: "2026-10-15T11:00:00+08:00", time: "11.00 – 14.00 WIB",
+      place: "Desa muara inu rt 02", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/fbuYU2eYNiDxAwgn6?g_st=ic"
     }
   ],
 
   story: [
-    { title: "Pertemuan", when: "[TAHUN]", text: "Dua insan dipertemukan oleh takdir, lalu saling mengenal dengan niat yang baik." },
-    { title: "Lamaran", when: "[TANGGAL LAMARAN]", text: "Dengan restu kedua keluarga, niat itu kami mantapkan dalam ikatan lamaran." },
-    { title: "Pernikahan", when: "[TANGGAL]", text: "Insya Allah kami melangkah ke jenjang pernikahan untuk beribadah bersama." }
+    { title: "Pertemuan", when: "2024", text: "Dua insan dipertemukan oleh takdir, lalu saling mengenal dengan niat yang baik." },
+    { title: "Lamaran", when: "17 09 2026", text: "Dengan restu kedua keluarga, niat itu kami mantapkan dalam ikatan lamaran." },
+    { title: "Pernikahan", when: "14 10 2026", text: "Insya Allah kami melangkah ke jenjang pernikahan untuk beribadah bersama." }
   ]
 };
 
