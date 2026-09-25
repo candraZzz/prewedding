@@ -22,7 +22,7 @@ const CONFIG = {
 
   story: [
     { title: "Pertemuan", when: "2024", text: "Dua insan dipertemukan oleh takdir, lalu saling mengenal dengan niat yang baik." },
-    { title: "Lamaran", when: "17 09 2026", text: "Dengan restu kedua keluarga, niat itu kami mantapkan dalam ikatan lamaran." },
+    { title: "Lamaran", when: "21 09 2026", text: "Dengan restu kedua keluarga, niat itu kami mantapkan dalam ikatan lamaran." },
     { title: "Pernikahan", when: "14 10 2026", text: "Insya Allah kami melangkah ke jenjang pernikahan untuk beribadah bersama." }
   ]
 };
