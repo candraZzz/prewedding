@@ -12,7 +12,7 @@ const CONFIG = {
   events: [
     {
       title: "Akad Nikah", date: "2026-10-06T08:00:00+08:00", time: "08.00 WIB – selesai",
-      place: "Desa muara inu rt 02", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/fbuYU2eYNiDxAwgn6?g_st=ic"
+      place: "KUA lahei 2", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/zpsRyzGiNzgK3Rjt5"
     },
     {
       title: "Resepsi", date: "2026-10-15T11:00:00+08:00", time: "11.00 – 14.00 WIB",
