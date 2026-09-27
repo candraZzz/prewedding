@@ -105,6 +105,7 @@ const CONFIG = {
     const b = e.target.closest("[data-act]"); if (!b) return;
     if (b.dataset.act === "prev") go(cur - 1);
     else go(cur === N - 1 ? 0 : cur + 1);
+    if (b.dataset.act === "next" && cur === 1) $("#bgm").play().catch(() => { });
   });
 
   // Kunci scroll: wheel, swipe, keyboard, dan scroll akibat fokus
