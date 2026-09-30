@@ -3,7 +3,7 @@
    ===================================================== */
 const CONFIG = {
   groom: { nick: "Tomi", full: "Tomi", parents: "Bapak Anto & Ibu Dewi" },
-  bride: { nick: "Herjianti", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prasi" },
+  bride: { nick: "JIhan", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prasi" },
 
   // Format: YYYY-MM-DDTHH:MM:SS+offset (WIB = +08:00, WIB= +07:00) — ganti [TANGGAL] di sini
   date: "2026-10-14T08:00:00+08:00",
@@ -11,11 +11,11 @@ const CONFIG = {
 
   events: [
     {
-      title: "Akad Nikah", date: "2026-10-09T08:00:00+08:00", time: "08.00 WIB – selesai",
-      place: "KUA lahei 2", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/zpsRyzGiNzgK3Rjt5"
+      title: "Akad Nikah", date: "2026-10-09T08:00:00+08:00",
+      place: "KUA lahei 2", address: "", maps: "https://maps.app.goo.gl/zpsRyzGiNzgK3Rjt5"
     },
     {
-      title: "Resepsi", date: "2026-10-15T11:00:00+08:00", time: "11.00 – 14.00 WIB",
+      title: "Resepsi", date: "2026-10-15T11:00:00+08:00", time: "06.00 – Selesai ",
       place: "Desa muara inu rt 02", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/fbuYU2eYNiDxAwgn6?g_st=ic"
     }
   ],
