@@ -1,17 +1,17 @@
 /* =====================================================
-   KONFIGURASI — ganti semua data undangan di sini saja
+   KONFIGURASI
    ===================================================== */
 const CONFIG = {
   groom: { nick: "Tomi", full: "Tomi", parents: "Bapak Anto & Ibu Dewi" },
   bride: { nick: "Herjianti", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prasi" },
 
-  // Format: YYYY-MM-DDTHH:MM:SS+offset (WITA = +08:00, WIB = +07:00) — ganti [TANGGAL] di sini
+  // Format: YYYY-MM-DDTHH:MM:SS+offset (WIB = +08:00, WIB= +07:00) — ganti [TANGGAL] di sini
   date: "2026-10-14T08:00:00+08:00",
   timeZone: "Asia/Makassar", // Asia/Jakarta untuk WIB (mis. Kalimantan Barat)
 
   events: [
     {
-      title: "Akad Nikah", date: "2026-10-06T08:00:00+08:00", time: "08.00 WIB – selesai",
+      title: "Akad Nikah", date: "2026-10-09T08:00:00+08:00", time: "08.00 WIB – selesai",
       place: "KUA lahei 2", address: "Gang Wirahusada", maps: "https://maps.app.goo.gl/zpsRyzGiNzgK3Rjt5"
     },
     {
@@ -21,14 +21,14 @@ const CONFIG = {
   ],
 
   story: [
-    { title: "Pertemuan", when: "2024", text: "Dua insan dipertemukan oleh takdir, lalu saling mengenal dengan niat yang baik." },
+    { title: "Pertemuan", when: "2022", text: "Dua insan dipertemukan oleh takdir, lalu saling mengenal dengan niat yang baik." },
     { title: "Lamaran", when: "21 09 2026", text: "Dengan restu kedua keluarga, niat itu kami mantapkan dalam ikatan lamaran." },
     { title: "Pernikahan", when: "14 10 2026", text: "Insya Allah kami melangkah ke jenjang pernikahan untuk beribadah bersama." }
   ]
 };
 
 /* =====================================================
-   Logika (tidak perlu diubah)
+   Logika (tidak perlu diubah) BY Czzz
    ===================================================== */
 (function () {
   const $ = (s) => document.querySelector(s);
