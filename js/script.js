@@ -3,7 +3,7 @@
    ===================================================== */
 const CONFIG = {
   groom: { nick: "Tomi", full: "Tomi", parents: "Bapak Anto & Ibu Dewi" },
-  bride: { nick: "JIhan", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prasi" },
+  bride: { nick: "Jihan", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prasi" },
 
   // Format: YYYY-MM-DDTHH:MM:SS+offset (WIB = +08:00, WIB= +07:00) — ganti [TANGGAL] di sini
   date: "2026-10-14T08:00:00+08:00",
@@ -46,7 +46,6 @@ const CONFIG = {
       <div class="ring rv">${star}<b>${fmt(e.date, { day: "numeric" })}</b></div>
       <p class="ev-d rv">${fmt(e.date, { weekday: "long" })}, ${fmt(e.date, { month: "long", year: "numeric" })}</p>
       <div class="div rv"><svg><use href="#spiral"/></svg></div>
-      <p class="ev-t rv">Pukul ${e.time}</p>
     </div>`;
   $("#sAkad").insertAdjacentHTML("beforeend", eventSlide(CONFIG.events[0], 0));
   $("#sResepsi").insertAdjacentHTML("beforeend", eventSlide(CONFIG.events[1], 1));
