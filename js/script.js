@@ -3,7 +3,7 @@
    ===================================================== */
 const CONFIG = {
   groom: { nick: "Tomi", full: "Tomi", parents: "Bapak Anto & Ibu Dewi" },
-  bride: { nick: "Jihan", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suriati Prapsi" },
+  bride: { nick: "Jihan", full: "Herjianti Suantara", parents: "Bapak Muliyadi & Ibu Suarti Prapsi" },
 
   // Format: YYYY-MM-DDTHH:MM:SS+offset (WIB = +08:00, WIB= +07:00) — ganti [TANGGAL] di sini
   date: "2026-10-14T08:00:00+08:00",
