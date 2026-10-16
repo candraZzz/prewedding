@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2b0f0b">
+<title>Terima Kasih — Jihan &amp; Tomi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-1:#2b0f0b;
+    --bg-2:#4a1c14;
+    --bg-3:#6b2a1d;
+    --gold:#d9b877;
+    --gold-soft:#e8d3a3;
+    --cream:#f6ead7;
+    --cream-dim:rgba(246,234,215,.74);
+    --glass:rgba(255,236,214,.09);
+    --glass-edge:rgba(255,236,214,.28);
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --script:"Great Vibes","Snell Roundhand","Apple Chancery",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  html,body{
+    width:100%;
+    height:100%;
+    height:100dvh;
+    overflow:hidden;
+    overscroll-behavior:none;
+    touch-action:none;
+    position:fixed;
+    inset:0;
+  }
+  body{
+    font-family:var(--sans);
+    color:var(--cream);
+    background:
+      radial-gradient(120% 90% at 20% 0%, var(--bg-3) 0%, transparent 55%),
+      radial-gradient(100% 80% at 100% 100%, #5a2218 0%, transparent 60%),
+      linear-gradient(160deg, var(--bg-2), var(--bg-1));
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* pola geometris islami, sangat tipis */
+  .pattern{
+    position:absolute;inset:0;opacity:.06;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23e8d3a3' stroke-width='1'%3E%3Cpath d='M40 4l10 22 22-10-10 22 22 10-22 10 10 22-22-10-10 22-10-22-22 10 10-22-22-10 22-10-10-22 22 10z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:80px 80px;
+    -webkit-mask-image:radial-gradient(ellipse at center, #000 20%, transparent 75%);
+            mask-image:radial-gradient(ellipse at center, #000 20%, transparent 75%);
+  }
+
+  /* cahaya lembut di belakang kaca */
+  .orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;will-change:transform}
+  .orb.a{width:46vmax;height:46vmax;left:-14vmax;top:-12vmax;background:rgba(217,184,119,.22);animation:drift 18s ease-in-out infinite alternate}
+  .orb.b{width:40vmax;height:40vmax;right:-14vmax;bottom:-14vmax;background:rgba(190,80,55,.30);animation:drift 22s ease-in-out infinite alternate-reverse}
+  @keyframes drift{to{transform:translate3d(6vmax,4vmax,0) scale(1.08)}}
+
+  .stage{
+    position:relative;z-index:1;
+    width:100%;height:100%;
+    display:flex;align-items:center;justify-content:center;
+    padding:max(env(safe-area-inset-top),14px) 16px max(env(safe-area-inset-bottom),14px);
+  }
+
+  .glass{
+    position:relative;
+    width:min(100%,520px);
+    max-height:100%;
+    display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+    text-align:center;
+    gap:clamp(8px,2.2dvh,22px);
+    padding:clamp(18px,4.4dvh,46px) clamp(18px,6vw,48px);
+    border-radius:clamp(24px,4vw,36px);
+    background:linear-gradient(145deg,rgba(255,236,214,.15),var(--glass) 45%,rgba(255,236,214,.05));
+    border:1px solid var(--glass-edge);
+    -webkit-backdrop-filter:blur(26px) saturate(150%);
+            backdrop-filter:blur(26px) saturate(150%);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.35),
+      inset 0 -1px 0 rgba(255,255,255,.06),
+      0 24px 60px -18px rgba(0,0,0,.55);
+    overflow:hidden;
+  }
+  /* pantulan cahaya */
+  .glass::before{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(115deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 32%);
+  }
+
+  .ornament{
+    width:clamp(34px,6dvh,52px);height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    position:relative;
+  }
+  .ornament::after{
+    content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;
+    background:var(--gold);transform:translate(-50%,-50%) rotate(45deg);
+  }
+
+  .eyebrow{
+    font-size:clamp(9px,1.5dvh,11px);
+    letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);
+    font-weight:500;
+  }
+  h1{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(30px,6.4dvh,56px);
+    letter-spacing:.04em;line-height:1.05;
+    color:var(--cream);
+  }
+  .msg{
+    font-family:var(--serif);
+    font-size:clamp(14px,2.5dvh,19px);
+    line-height:1.55;color:var(--cream-dim);
+    max-width:36ch;
+  }
+  .msg.dua{font-style:italic}
+  .salam{
+    font-size:clamp(10px,1.7dvh,13px);
+    letter-spacing:.16em;color:var(--gold-soft);
+  }
+  .names{
+    font-family:var(--script);font-weight:400;
+    font-size:clamp(44px,10.5dvh,92px);
+    line-height:1.05;
+    background:linear-gradient(180deg,#f7e6bd 0%,var(--gold) 55%,#b78f4a 100%);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    padding:0 .1em .08em;
+    filter:drop-shadow(0 2px 14px rgba(217,184,119,.25));
+  }
+
+  .block{display:flex;flex-direction:column;align-items:center;gap:clamp(6px,1.6dvh,14px)}
+
+  /* animasi masuk */
+  .in{opacity:0;transform:translate3d(0,12px,0);animation:rise .9s cubic-bezier(.22,.8,.3,1) forwards}
+  .d1{animation-delay:.1s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}
+  .d4{animation-delay:.7s}.d5{animation-delay:.95s}.d6{animation-delay:1.2s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .glass.in{transform:translate3d(0,18px,0) scale(.985);animation-name:card;animation-duration:1s}
+  @keyframes card{to{opacity:1;transform:none}}
+
+  @media (max-height:560px){
+    .eyebrow,.ornament{display:none}
+    .glass{padding:14px 22px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .in,.orb{animation:none;opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+  <div class="pattern"></div>
+  <div class="orb a"></div>
+  <div class="orb b"></div>
+
+  <main class="stage">
+    <section class="glass in">
+      <div class="block">
+        <div class="ornament in d1"></div>
+        <p class="eyebrow in d1">Undangan Pernikahan</p>
+        <h1 class="in d2">Terima Kasih</h1>
+      </div>
+
+      <div class="block">
+        <p class="msg in d3">Terima kasih telah meluangkan waktu untuk mengunjungi undangan pernikahan kami dan menjadi bagian dari cerita bahagia kami.</p>
+        <p class="msg dua in d4">Semoga kebaikan dan doa yang diberikan kembali menjadi kebahagiaan untuk Anda.</p>
+      </div>
+
+      <div class="block">
+        <p class="salam in d5">Salam hangat dan penuh cinta,</p>
+        <p class="names in d6">Jihan &amp; Tomi</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // kunci scroll/gesture di semua perangkat
+    ['touchmove','wheel','scroll'].forEach(function(e){
+      window.addEventListener(e,function(ev){ev.preventDefault();},{passive:false});
+    });
+    window.addEventListener('keydown',function(e){
+      if([32,33,34,35,36,37,38,39,40].indexOf(e.keyCode)>-1)e.preventDefault();
+    });
+  </script>
+</body>
+</html>
