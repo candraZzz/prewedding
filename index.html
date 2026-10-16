@@ -4,12 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#2b0f0b">
+<meta name="color-scheme" content="dark">
 <title>Terima Kasih — Jihan &amp; Tomi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   :root{
+    color-scheme:dark;
     --bg-1:#2b0f0b;
     --bg-2:#4a1c14;
     --bg-3:#6b2a1d;
@@ -25,6 +27,10 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
 
+  /* FIX: warna solid di html + body sebagai fallback (iOS / in-app browser) */
+  html{
+    background:#2b0f0b;
+  }
   html,body{
     width:100%;
     height:100%;
@@ -32,17 +38,25 @@
     overflow:hidden;
     overscroll-behavior:none;
     touch-action:none;
-    position:fixed;
-    inset:0;
   }
   body{
+    position:fixed;
+    inset:0;
     font-family:var(--sans);
     color:var(--cream);
+    background-color:#2b0f0b;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* FIX: gradient dipindah ke layer sendiri, tidak bergantung propagasi background body */
+  .bg{
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-color:#2b0f0b;
     background:
       radial-gradient(120% 90% at 20% 0%, var(--bg-3) 0%, transparent 55%),
       radial-gradient(100% 80% at 100% 100%, #5a2218 0%, transparent 60%),
       linear-gradient(160deg, var(--bg-2), var(--bg-1));
-    -webkit-font-smoothing:antialiased;
+    background-color:#2b0f0b;
   }
 
   /* pola geometris islami, sangat tipis */
@@ -155,6 +169,7 @@
 </style>
 </head>
 <body>
+  <div class="bg"></div>
   <div class="pattern"></div>
   <div class="orb a"></div>
   <div class="orb b"></div>
@@ -179,6 +194,10 @@
     </section>
   </main>
 
+  <audio id="bgm" autoplay loop playsinline>
+    <source src="assets/audio/lagu.mp3" type="audio/mpeg">
+  </audio>
+
   <script>
     // kunci scroll/gesture di semua perangkat
     ['touchmove','wheel','scroll'].forEach(function(e){
@@ -187,6 +206,29 @@
     window.addEventListener('keydown',function(e){
       if([32,33,34,35,36,37,38,39,40].indexOf(e.keyCode)>-1)e.preventDefault();
     });
+
+    // iOS/Chrome blokir autoplay bersuara: coba play, kalau gagal, play pas sentuhan pertama
+    (function(){
+      var a=document.getElementById('bgm');
+      if(!a)return;
+      function go(){
+        var p=a.play();
+        if(p&&p.then){p.then(off).catch(function(){});}else{off();}
+      }
+      function off(){
+        ['touchstart','pointerdown','click','keydown'].forEach(function(e){
+          window.removeEventListener(e,go);
+        });
+      }
+      var p=a.play();
+      if(p&&p.catch){
+        p.catch(function(){
+          ['touchstart','pointerdown','click','keydown'].forEach(function(e){
+            window.addEventListener(e,go,{passive:true});
+          });
+        });
+      }
+    })();
   </script>
 </body>
 </html>
